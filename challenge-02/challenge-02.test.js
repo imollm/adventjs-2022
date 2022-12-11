@@ -1,6 +1,6 @@
 'use strict'
 
-const countHours = require('./challange-02')
+const countHours = require('./challenge-02')
 
 describe('Tests of challange 02', () => {
     test('it should be 0 when no holidays', () => {

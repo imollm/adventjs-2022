@@ -1,6 +1,6 @@
 'use strict'
 
-const wrapping = require('./challange-01')
+const wrapping = require('./challenge-01')
 
 describe('Tests of challange 01', () => {
     test('it shouldn\'t returns an empty array', () => {
