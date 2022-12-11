@@ -12,7 +12,7 @@ describe('Tests of challenge 02', () => {
         expect(recoupHours).toBe(0)
     })
 
-    test('it should returns type number', () => {
+    test('it should return type number', () => {
         const year = 2022
         const holidays = ['01/06', '04/01', '12/25']
 
