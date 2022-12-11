@@ -2,7 +2,7 @@
 
 const wrapping = require('./challenge-01')
 
-describe('Tests of challange 01', () => {
+describe('Tests of challenge 01', () => {
     test('it shouldn\'t returns an empty array', () => {
         const gifts = ['ivan']
         const giftsWrapped = wrapping(gifts)

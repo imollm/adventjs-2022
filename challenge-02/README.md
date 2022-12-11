@@ -28,7 +28,7 @@ Aunque el 31 de diciembre sea festivo, las horas extra se harán el mismo año y
 El método Date.getDay() te devuelve el día de la semana de una fecha. El 0 es domingo, el 1 es lunes, etc.
 
 # Solución
-### Completed with 90 points
+### Completado con 90 puntos
 ```js
 function countHours(year, holidays) {
     let numMissingDays = 0

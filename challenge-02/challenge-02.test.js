@@ -2,7 +2,7 @@
 
 const countHours = require('./challenge-02')
 
-describe('Tests of challange 02', () => {
+describe('Tests of challenge 02', () => {
     test('it should be 0 when no holidays', () => {
         const year = 2022
         const holidays = []
