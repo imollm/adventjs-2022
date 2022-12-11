@@ -29,7 +29,7 @@ Como ves, el papel de regalo envuelve el string. Por arriba y por abajo, para no
 Ah, **y no modifiques (mutes) el array original.**
 
 # Solución
-### Completed with 121 points
+### Completed with 121 points
 ```js
 function wrapping(gifts) {
     return gifts.map(gift => {
