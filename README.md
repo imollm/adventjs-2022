@@ -4,6 +4,7 @@ Soluciones a los retos propuestos en [AdventJs.dev](https://advent.dev) edición
 
 ## Retos
 
-| Reto | Título                                                            | Dificultad  | Soluciones                            |
-| ---- | ----------------------------------------------------------------- | ----------- | ------------------------------------- |
-|  01  | ¡Automatizando envolver regalos de navidad!                       | Fácil       | [Ver solución](./challenges/day01.md) |
+| Reto | Título                                                            | Dificultad  | Soluciones                               |
+| ---- | ----------------------------------------------------------------- | ----------- | ---------------------------------------- |
+|  01  | ¡Automatizando envolver regalos de navidad!                       | Fácil       | [Ver solución](./challenge-01/README.md) |
+|  02  | Nadie quiere hacer horas extras                                   | Fácil       | [Ver solución](./challenge-02/README.md) |

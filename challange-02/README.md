@@ -26,3 +26,23 @@ Cosas a tener en cuenta y consejos:
 El año puede ser bisiesto. Haz las comprobaciones que necesitas para ello, si fuese necesario.
 Aunque el 31 de diciembre sea festivo, las horas extra se harán el mismo año y no el siguiente.
 El método Date.getDay() te devuelve el día de la semana de una fecha. El 0 es domingo, el 1 es lunes, etc.
+
+# Solución
+### Completed with 90 points
+```js
+function countHours(year, holidays) {
+    let numMissingDays = 0
+
+    holidays.forEach(holidayDay => {
+        let [month, day] = holidayDay.split('/')
+        const date = new Date(`${year}/${month}/${day}`)
+        const dayOfWeak = date.getDay()
+
+        if (dayOfWeak !== 0 && dayOfWeak !== 6) {
+            numMissingDays++
+        }
+    });
+
+    return numMissingDays * 2
+}
+```

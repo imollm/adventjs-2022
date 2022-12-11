@@ -27,3 +27,15 @@ Como ves, el papel de regalo envuelve el string. Por arriba y por abajo, para no
 **¡Ojo!** Asegúrate que pones el número correcto de * para envolver completamente el string. Pero no demasiados. Sólo los necesarios para cubrir el string.
 
 Ah, **y no modifiques (mutes) el array original.**
+
+# Solución
+### Completed with 121 points
+```js
+function wrapping(gifts) {
+    return gifts.map(gift => {
+        const len = gift.length + 2
+        const topAndBottom = '*'.repeat(len)
+        return `${topAndBottom}\n*${gift}*\n${topAndBottom}` 
+    })
+}
+```
