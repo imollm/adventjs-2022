@@ -3,28 +3,28 @@
 const wrapping = require('./challange-01')
 
 describe('Tests of challange 01', () => {
-    test('Check not empty returned array', () => {
+    test('it shouldn\'t returns an empty array', () => {
         const gifts = ['ivan']
         const giftsWrapped = wrapping(gifts)
 
         expect(giftsWrapped).not.toEqual([])
     })
 
-    test('Check if both arrays match the same number of items', () => {
+    test('it should returns the same number of items', () => {
         const gifts = ['ivan']
         const giftsWrapped = wrapping(gifts)
 
         expect(giftsWrapped.length).toEqual(gifts.length)
     })
 
-    test('Check if we got an empty array', () => {
+    test('it should returns an empty array', () => {
         const gifts = []
         const giftsWrapped = wrapping(gifts)
 
         expect(giftsWrapped).toEqual([])
     })
 
-    test('Check if we got the correct wrapped gifts', () => {
+    test('it should returns the correct wrapped gifts', () => {
         const gifts = ['cat', 'game', 'socks']
         const expectedResult = [
             "*****\n*cat*\n*****",
@@ -35,7 +35,7 @@ describe('Tests of challange 01', () => {
         expect(wrapping(gifts)).toEqual(expectedResult)
     })
 
-    test('Check if we got the correct wrapped gifts', () => {
+    test('it should returns the correct wrapped gifts', () => {
         const gifts = ['ivan']
         const expectedResult = [
             "******\n*ivan*\n******"
