@@ -1,6 +1,8 @@
 'use strict'
 
-const getMaxGifts = require('./challenge-05')
+import { describe, test } from 'node:test';
+import assert from 'node:assert';
+import { getMaxGifts } from './challenge-05.js';
 
 describe('Tests of challenge 05', () => {
     test('it should return 20', () => {
@@ -10,7 +12,7 @@ describe('Tests of challenge 05', () => {
 
         const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
 
-        expect(higherSum).toEqual(maxGifts)
+        assert.equal(higherSum, 20)
     })
 
     test('it should return 0', () => {
@@ -20,7 +22,7 @@ describe('Tests of challenge 05', () => {
 
         const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
 
-        expect(higherSum).toEqual(0)
+        assert.equal(higherSum, 0)
     })
 
     test('it should return 50', () => {
@@ -30,7 +32,7 @@ describe('Tests of challenge 05', () => {
 
         const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
 
-        expect(higherSum).toEqual(50)
+        assert.equal(higherSum, 50)
     })
 
     test('it should return 70', () => {
@@ -40,7 +42,7 @@ describe('Tests of challenge 05', () => {
 
         const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
 
-        expect(higherSum).toEqual(70)
+        assert.equal(higherSum, 70)
     })
 
     test('it should return 100', () => {
@@ -50,7 +52,7 @@ describe('Tests of challenge 05', () => {
 
         const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
 
-        expect(higherSum).toEqual(100)
+        assert.equal(higherSum, 100)
     })
 
     test('it should return 100', () => {
@@ -60,16 +62,26 @@ describe('Tests of challenge 05', () => {
 
         const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
 
-        expect(higherSum).toEqual(100)
+        assert.equal(higherSum, 100)
     })
     
     test('it should return 100', () => {
-        const giftsCities = [50, 70, 30]
-        const maxGifts = 100
+        const giftsCities = [50, 10, 40, 1000, 500, 200]
+        const maxGifts = 199
         const maxCities = 4
 
         const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
 
-        expect(higherSum).toEqual(100)
+        assert.equal(higherSum, 100)
+    })
+
+    test('it should return 115', () => {
+        const giftsCities = [50, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        const maxGifts = 1000
+        const maxCities = 1000
+
+        const higherSum = getMaxGifts(giftsCities, maxGifts, maxCities)
+
+        assert.equal(higherSum, 115)
     })
 })

@@ -1,27 +1,17 @@
-'use strict'
+"use strict";
 
-function getMaxGifts(giftsCities, maxGifts, maxCities) {
-    let counter = 0
-    let accumulate = 0
-
-    giftsCities.sort((giftA, giftB) => {
-        if (giftA > giftB) return -1
-        else if (giftA < giftB) return 1
-        else if (giftA == giftB) return 0
-    })
-
-    giftsCities.forEach(giftCity => {
-        if (
-            giftCity < maxGifts &&
-            counter < maxCities &&
-            giftCity + accumulate <= maxGifts
-        ) {
-            counter++
-            accumulate += giftCity
-        }
-    })
-
-    return accumulate
+export function getMaxGifts(giftsCities, maxGifts, maxCities) {
+  return Math.max(
+    ...giftsCities
+      .sort((x, y) => y - x)
+      .reduce((result, _, i) => (
+        i && giftsCities.unshift(giftsCities.pop()),
+        (i = giftsCities
+          .slice(0, maxCities)
+          .reduce((acc, curr) => (acc += curr), 0)),
+        i <= maxGifts && result.push(i),
+        i - giftsCities[maxCities - 1] <= maxGifts &&
+        result.push(i - giftsCities[maxCities - 1]),
+        result
+      ), []), 0);
 }
-
-module.exports = getMaxGifts
