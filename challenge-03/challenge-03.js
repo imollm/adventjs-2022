@@ -1,6 +1,6 @@
 'use strict'
 
-function distributeGifts(packOfGifts, reindeers) {
+export function distributeGifts(packOfGifts, reindeers) {
     function calcGiftsWeight(packOfGifts) {
         let weightGifts = 0
     
@@ -42,5 +42,3 @@ function distributeGifts(packOfGifts, reindeers) {
 
     return Math.floor(maxWeightReindeers / weightGifts)
 }
-
-module.exports = distributeGifts

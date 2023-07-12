@@ -1,6 +1,6 @@
 'use strict'
 
-function fitsInOneBox(boxes) {
+export function fitsInOneBox(boxes) {
     let canBeFitted = false
 
     boxes.sort((boxA, boxB) => {
@@ -25,5 +25,3 @@ function fitsInOneBox(boxes) {
 
     return canBeFitted
 }
-
-module.exports = fitsInOneBox

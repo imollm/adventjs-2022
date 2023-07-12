@@ -1,6 +1,6 @@
 'use strict'
 
-function countHours(year, holidays) {
+export function countHours(year, holidays) {
     let numMissingDays = 0
 
     holidays.forEach(holidayDay => {
@@ -15,5 +15,3 @@ function countHours(year, holidays) {
 
     return numMissingDays * 2
 }
-
-module.exports = countHours
